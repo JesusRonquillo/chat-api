@@ -11,10 +11,11 @@ const findAllMessagesByConversation = async (conversationId, userId) => {
             }
         }
     })
+    console.log(data)
     return data
 }
 
-const validateUserOnConversation = async( userId, conversationId ) => {
+const validateUserOnConversation = async (userId, conversationId) => {
     const data = await Participants.findOne({
         where: {
             userId,
